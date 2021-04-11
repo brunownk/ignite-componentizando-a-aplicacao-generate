@@ -15,7 +15,7 @@ interface GenreResponseProps {
   title: string;
 }
 
-export function SideBar({selectedGenreId, setSelectedGenreId}: SideBarProps) {
+export function SideBar({ selectedGenreId, setSelectedGenreId }: SideBarProps) {
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {
