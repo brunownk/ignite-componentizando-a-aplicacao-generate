@@ -19,9 +19,11 @@ export function SideBar({ selectedGenreId, setSelectedGenreId }: SideBarProps) {
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {
-    api.get<GenreResponseProps[]>('genres').then(response => {
-      setGenres(response.data);
-    });
+    api
+      .get<GenreResponseProps[]>('genres')
+      .then(response => {
+        setGenres(response.data);
+       });
   }, []);
 
   function handleClickButton(id: number) {
